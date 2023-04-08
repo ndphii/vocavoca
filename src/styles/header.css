@@ -1,0 +1,7 @@
+.nav-link {
+    font-size: 20px;
+}
+.nav-link:hover {
+    font-size: 17px;
+    filter: drop-shadow(0 0 0.2rem rgb(188, 243, 36));
+}

@@ -1,0 +1,14 @@
+p {
+    margin-top: 5px;
+}
+.btn-img {
+    border: none;
+    color: none;
+    border-radius: none;
+    background-color: transparent;
+}
+.btn-img:active {
+    color: yellow;
+    font-size: 20px;
+    transition: 0.1s;
+}
