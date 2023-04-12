@@ -1,8 +1,30 @@
 import React from 'react';
 import "../styles/header.css"
+import { getDatabase, ref, child, get } from "firebase/database";
+import { database } from "../firebase.js"
+
 class Header extends React.Component {
 
+    getListKh() {
+        const dbRef = ref(getDatabase());
+        get(child(dbRef, `KH`)).then((snapshot) => {
+            if (snapshot.exists()) {
+                //return (snapshot.val());
+                console.log(snapshot.val());
+                // return list = Object.snapshot.val();
+            } else {
+                console.log("No data available");
+            }
+        }).catch((error) => {
+            console.error(error);
+        });
+    }
+
     render() {
+        window.addEventListener("load", (event) => {
+            this.getListKh();
+            // console.log(this.getListKh())
+        });
         return (
             <>
                 <nav className="navbar navbar-expand-lg navbar-light bg-success">

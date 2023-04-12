@@ -2,6 +2,7 @@ import React from "react";
 import List_toiec from "./list_toiec.js";
 import "../../styles/home.css"
 class Home extends React.Component {
+
     state = {
         vocabulary: "",
         viet_sub: "",
@@ -10,6 +11,8 @@ class Home extends React.Component {
             { id: "01", vocabulary: "exceptional", word_type: "(adj)", InterPhonetic: "/ɪkˈsepʃənl/", viet_sub: "Khác thường, đặc biệt, ngoại lệ", link_img: "https://blog.dktcdn.net/files/ban-hang-online-khac-biet.jpg" },
             { id: "02", vocabulary: "marginal", word_type: "(adj)", InterPhonetic: "/ˈmɑːrdʒɪnl/", viet_sub: "Cận biên (kinh tế), ở lề", link_img: "https://d1vtbil09mxkdf.cloudfront.net/Business%20economics%20graphs/Profit-max2.webp" },
             { id: "03", vocabulary: "conservative", word_type: "(adj)", InterPhonetic: "/kənˈsɜːrvətɪv/", viet_sub: "Bảo thủ, dè dặt, thận trọng", link_img: "https://thosuaxe.vn/wp-content/uploads/2023/01/tinh-bao-thu-la-gi.jpg" },
+            { id: "04", vocabulary: "calculation", word_type: "(n)", InterPhonetic: "/ˌkælkjuˈleɪʃn/", viet_sub: "Sự tính toán, cân nhắc", link_img: "https://accnet.vn/wp-content/uploads/2022/11/tinh-gia-thanh-san-pham-7.png" },
+
         ]
     }
 
@@ -28,18 +31,18 @@ class Home extends React.Component {
             <>
                 <List_toiec handleShowImg={this.handleShowImg} List_keyword={this.state.List_keyword} />
 
-                <div className="modal fade" id="exampleModalToggle" aria-hidden="false" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div className="modal fade" id="exampleModalToggle" aria-hidden="false" aria-labelledby="exampleModalToggleLabel" tabIndex="-1">
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                             <div className="modal-header">
                                 <p className="d-flex modal-title justify-content-around ">
-                                    <p className="fw-bold " id="staticBackdropLabel">{this.state.vocabulary}</p>
-                                    <p className="ps-3 viet-sub">{this.state.viet_sub}</p>
+                                    <span className="fw-bold " id="vocabulary">{this.state.vocabulary}</span>
+                                    <span className="ps-3 viet-sub" id="viet_sub">{this.state.viet_sub}</span>
                                 </p>
                                 <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div className="modal-body">
-                                <img src={this.state.link_img} class="card-img-top " alt="..." />
+                                <img src={this.state.link_img} className="card-img-top " alt="..." />
                             </div>
                         </div>
                     </div>
