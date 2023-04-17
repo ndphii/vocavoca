@@ -5,13 +5,17 @@ import { database } from "../firebase.js"
 
 class Header extends React.Component {
 
-    getListKh() {
+    async load_DM_KH() {
         const dbRef = ref(getDatabase());
-        get(child(dbRef, `KH`)).then((snapshot) => {
+        await get(child(dbRef, `DM_KH`)).then((snapshot) => {
             if (snapshot.exists()) {
-                //return (snapshot.val());
-                console.log(snapshot.val());
-                // return list = Object.snapshot.val();
+                console.log(snapshot.val().K1.TEN_KH);
+                document.getElementById("K1").innerHTML = snapshot.val().K1.TEN_KH;
+                document.getElementById("K2").innerHTML = snapshot.val().K2.TEN_KH;
+                document.getElementById("K3").innerHTML = snapshot.val().K3.TEN_KH;
+                document.getElementById("K4").innerHTML = snapshot.val().K4.TEN_KH;
+                document.getElementById("K5").innerHTML = snapshot.val().K5.TEN_KH;
+
             } else {
                 console.log("No data available");
             }
@@ -21,10 +25,7 @@ class Header extends React.Component {
     }
 
     render() {
-        window.addEventListener("load", (event) => {
-            this.getListKh();
-            // console.log(this.getListKh())
-        });
+        window.addEventListener("load", this.load_DM_KH());
         return (
             <>
                 <nav className="navbar navbar-expand-lg navbar-light bg-success">
@@ -36,19 +37,19 @@ class Header extends React.Component {
                         <div className="collapse navbar-collapse " id="navbarScroll">
                             <ul className="navbar-nav d-flex  text-center me-auto ms-auto  navbar-nav-scroll" >
                                 <li className="nav-item">
-                                    <a className="nav-link text-warning fw-bold" aria-current="page" href="#">Hơn 1000 từ vựng Toeic</a>
+                                    <a className="nav-link text-warning fw-bold" id="K1" aria-current="page" href="#"></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link text-warning fw-bold" href="#">Phrasal Verbs & IDIOM</a>
+                                    <a className="nav-link text-warning fw-bold" id="K2" href="#"></a>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle text-warning " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Khác
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                        <li><a className="dropdown-item text-success" href="#">1000 Từ cơ bản</a></li>
-                                        <li><a className="dropdown-item text-success" href="#">Tiếng anh CNTT</a></li>
-                                        <li><a className="dropdown-item text-success" href="#">Tiếng anh công sở</a></li>
+                                        <li><a className="dropdown-item text-success" id="K3" href="#"></a></li>
+                                        <li><a className="dropdown-item text-success" id="K4" href="#"></a></li>
+                                        <li><a className="dropdown-item text-success" id="K5" href="#"></a></li>
                                     </ul>
                                 </li>
                             </ul>
