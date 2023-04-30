@@ -1,9 +1,11 @@
 import React from "react";
 import List_toiec from "./list_toiec.js";
 import "../../styles/home.css"
+import ReduxToeic from "../../redux/Redux_toeic.js";
 class Home extends React.Component {
 
     state = {
+        test: [ReduxToeic()],
         vocabulary: "",
         viet_sub: "",
         link_img: "",

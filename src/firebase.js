@@ -12,12 +12,13 @@ import { getDatabase } from "firebase/database";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_FIREBASE_KEY,
-    authDomain: "vocavoca-d0bc9.firebaseapp.com",
+    authDomain: process.env.REACT_APP_authDomain_KEY,
+    databaseURL: process.env.REACT_APP_databaseURL_KEY,
     projectId: "vocavoca-d0bc9",
     storageBucket: "vocavoca-d0bc9.appspot.com",
     messagingSenderId: "146124092352",
-    appId: "1:146124092352:web:1269282ffa8a06c49c8e25",
-    measurementId: "G-H0LHJTXJ73"
+    appId: "1:146124092352:web:19dfec7d3f35d2419c8e25",
+    measurementId: "G-5MZ81CHSKJ"
 };
 
 // Initialize Firebase
