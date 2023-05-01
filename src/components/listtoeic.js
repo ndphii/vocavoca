@@ -21,7 +21,7 @@ class ListToiec extends React.Component {
         return (
             <div>
                 {objectEntries.map(([key, value]) => { // sử dụng destructuring để truy cập key và value
-                    if (key.startsWith("B")) { // chỉ hiển thị các entry có key bắt đầu bằng "B" có nghĩa là B1 B2 là các bài trong list toeic
+                    if (key.startsWith("B") && key !== ("message")) { // chỉ hiển thị các entry có key bắt đầu bằng "B" có nghĩa là B1 B2 là các bài trong list toeic
                         return (
                             <>
                                 <Link to={`/Toeic/${key}/${value.ID}`} >

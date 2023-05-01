@@ -5,18 +5,15 @@ async function ReduxListVocaToeic(key, ID) {
         const snapshot = await get(child(dbRef, `DM_KH/K1/${key}/list_voca`));
         if (snapshot.exists()) {
             const list = snapshot.val();
-            console.log("redux", key, ID)
             return list;
         } else {
-            console.log("No data available");
-            return null;
+            const noData = { message: "Tạm Thời Bài Học Này Chưa Được Cập Nhật" };
+            return noData;
         }
     } catch (error) {
         console.error(error);
         return null;
     }
-
 }
-
 
 export default ReduxListVocaToeic;

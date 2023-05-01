@@ -1,5 +1,5 @@
 import React from 'react';
-import ListToiec from '../components/listtoeic';
+import ListToiec from '../../components/listtoeic';
 
 
 

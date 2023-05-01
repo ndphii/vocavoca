@@ -1,5 +1,5 @@
 import React from 'react';
-import ListVocaToeic from '../components/list_voca_toiec';;
+import ListVocaToeic from '../../components/list_voca_toiec'
 
 class ViewListVocaToeic extends React.Component {
     state = {
