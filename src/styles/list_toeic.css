@@ -13,5 +13,26 @@ p {
     transition: 0.1s;
 }
 .button-list {
-    background: linear-gradient(to right, #7a7fba, #11c37c);
+    background: linear-gradient(to right, #11c37c, #7a7fba);
+}
+
+.card-bai-hoc {
+    background-image: linear-gradient(135deg, #11c37c 40%, #7a7fba);
+}
+.btn-bai-hoc {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: none;
+}
+.btn-bai-hoc:active {
+    box-shadow: 2px 2px 5px #11c37c;
+}
+.contain-IMG-baihoc {
+    width: 130px;
+    height: 130px;
+}
+.contain-IMG-baihoc > img {
+    width: inherit;
+    height: 100%;
 }

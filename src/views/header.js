@@ -34,7 +34,7 @@ class Header extends React.Component {
         window.addEventListener("load", this.load_DM_KH());
         return (
             <>
-                <nav className="navbar navbar-expand-lg navbar-light bg-success">
+                <nav className="navbar navbar-expand-lg navbar-light bg-success sticky-top">
                     <div className="container-fluid">
                         <Link className="navbar-brand ms-5 fw-bold text-warning" to="/">VOCAVOCA</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
