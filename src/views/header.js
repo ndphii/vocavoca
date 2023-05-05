@@ -57,7 +57,6 @@ class Header extends React.Component {
                                         <li><a className="dropdown-item text-success" id="K3" href="#"></a></li>
                                         <li><a className="dropdown-item text-success" id="K4" href="#"></a></li>
                                         <li><a className="dropdown-item text-success" id="K5" href="#"></a></li>
-                                        <li><Link className="dropdown-item text-success" to="/Test">Test</Link></li>
                                     </ul>
                                 </li>
                             </ul>
